@@ -102,7 +102,9 @@ app.post('/', (req, res) => {
         return (i === 0 ? '' : learnerType === 'Visual' ? '<br>' : ' ') + interval + (language === 'vi-vn' ? ' tiếng làm ' : (parseFloat(interval) > 1 ? ' hours' : ' hour') + ' of doing ' ) + e.name;
       }
       return [];
-    }).join() + (learnerType === 'Auditory' ? '. ' : '<br>') + (language === 'vi-vn' ? 'Hãy chăm chỉ vì một tương lai tốt đẹp đang chờ đợi phía trước!' : 'Let\'s work hard for a bright awaiting future!');
+    }).join() + (learnerType === 'Auditory' ? '. ' : '<br>') + (language === 'vi-vn' ? 
+      'Giữa các phiên học bạn nên dành thời gian nghỉ 5 phút giữa các phiên để đạt được hiệu quả cao nhất. Hãy chăm chỉ vì một tương lai tốt đẹp đang chờ đợi phía trước!' :
+      'You should have a 5 minute break between sessions to achieve maximum efficiency. Let\'s work hard for a bright awaiting future!');
     const message = messageP1 + (learnerType === 'Visual' ? '<br>' : '') + messageP2;
 
     if (todoList[todayIndex].tasks.length > 0) {
